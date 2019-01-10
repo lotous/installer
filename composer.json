@@ -1,0 +1,26 @@
+{
+  "name": "lotous/installer",
+  "type": "composer-plugin",
+  "description": "A composer plugin, to help install modules for lotous applications.",
+  "license": "MIT",
+  "keywords": ["composer", "composer-plugin", "composer-installer","lotous-installer"],
+  "authors": [
+    {
+      "name": "Elbert Tous",
+      "email": "contact@lotous.com.co"
+    }
+  ],
+  "require": {
+    "composer/installers" : "^1.3.0",
+    "composer-plugin-api" : "^1.0"
+  },
+  "autoload": {
+    "psr-4": {"Lotous\\Composer\\": "src/"}
+  },
+  "extra": {
+      "class": ["Lotous\\Composer\\LotousModule"],
+      "branch-alias": {
+        "dev-master": "1.0.x-dev"
+       }
+  }
+}
